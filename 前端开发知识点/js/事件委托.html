@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+事件委托?
+利用事件默认会进行冒泡传播的机制，给最外层元素相关行为绑定事件，当里面的元素相关行为触发的时候，也会触发最外层元素的行为，然后我们可以根据事件对象中的事件源做出相应的处理。
+-->
+<!--
+预留事件只能用事件委托的方式实现
+$('#oul').delegate('li','click',function(){})
+delegate 是特定方法，只负责事件委托。
+$('#oul').delegate('click')
+移除事件委托
+-->
+<script>
+    oul.onclick=function (e) {
+        e=e||window.event;
+        let tar=e.target||e.srcElement;
+        if(tar.tagName.toLowerCase()==='LI'){
+            alert(tar.innerHTML)
+        }else {
+            alert('事件源不是li')
+        }
+    }
+</script>
+</body>
+</html>

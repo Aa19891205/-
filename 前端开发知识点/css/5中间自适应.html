@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            display: grid;
+            width: 100%;
+            grid-template-rows: 100px;
+            grid-template-columns: 300px auto 300px;
+        }
+
+        .box .left{
+            background-color: red;
+        }
+
+        .box .right{
+            background-color: blue;
+        }
+
+        .box .center{
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="left"></div>
+    <div class="center">第五种方法：网格布局</div>
+    <div class="right"></div>
+</div>
+
+</body>
+</html>

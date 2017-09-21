@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+event对象是什么？
+他是当事件触发时，浏览器传递给处理函数的一个对象数据类型的值，这个对象里面以键值对的形式存储着有关事件的信息。
+怎么得到event？
+兼容写法 e=e||window.event
+事件对象可以用来做什么？
+1.得到事件源
+e.target||e.srcElement
+2.得到点击点距离body（可视区域）的x轴，y轴坐标
+e.clientX   clientY
+3.得到点击点距离整个文档（document）的x轴，y轴坐标
+e.pageX   e.pageY
+4.阻止默认行为
+e.preventDefault()||returnValue=false
+5.阻止冒泡传播
+e.stopPropagation()||e.cancelBubble=true
+6.获得相对元素的坐标(谷歌低版本有兼容性问题）
+e.offsetX 和e.offsetY
+7.e.key 按键符
+8 e.keyCode 键码值
+9.e.wheelDelta 滚轮的上下方向监听值
+-->
+</body>
+</html>

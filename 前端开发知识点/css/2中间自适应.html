@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box>div{
+            height: 300px;
+            position: absolute;
+        }
+        #box1{
+            left: 0;
+            width: 300px;
+            background-color: navy;
+        }
+        #box2{
+            right: 0;
+            width: 300px;
+            background-color: navy;
+        }
+        #box3{
+            left: 300px;
+            right: 300px;
+            background-color: navajowhite;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+<!--采用绝对定位来布局，没有写relative，默认为body-->
+<div id="box">
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3">2141616342345748438586797569768056346356452756867</div>
+</div>
+</body>
+</html>

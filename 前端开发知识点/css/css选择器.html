@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--1.标签选择器，权重为1
+2.类选择器，写在标签里面，权重为10
+3.*选择器，通配符选择器，权重为0~1之间，通配符权重大于继承
+4.后代选择器，权重为所有单个选择器之和
+5.id选择器，id名只允许唯一，符号为#，权重为100
+6.>子级选择器，父级选择器>子级选择器，只有子级不包含孙子
+7.相邻兄弟选择器（只能选择一个元素）通过哥哥选择器选择紧挨着的下面的弟弟元素,权重为所有选择器之和。
+button:focus+div{background:red}
+8.选择同级的弟弟元素，通过哥哥选择器选择弟弟元素，权重为所有之和，p~div{color:red}
+9.并集选择器，不同选择器用逗号隔开
+10.交集选择器（目的是为了增加选择器的权重）将同一个标签内的选择器组合在一起。
+11.属性选择器[href]{},交集选择器a[href]{}
+12.伪类选择器，::after
+13.动态伪类选择器，a:hover{color:blue}，当鼠标划过时变色
+14.结构性伪类选择器，p:nth-child(n)选择父级下的正数第几个p标签
+first-child=:nth-child(1)
+p:nth-last-child(n)选择父级下的倒数第几个p标签
+last-child=:nth-last-child(1)
+first-of-type=:nth-of-type(1)
+last-of-type=:nth-last-of-type(1)
+p:empty{},找到父级下所有空的p标签
+15.p:first-line{background：red}第一行字变红
+p:first-letter{font-size：30px}第一个字变大小
+p::selection{background:red;color:blue}当文字被选中时变色
+16.过滤选择器,p:not(.h2){background:red},除了h2外其他都变色
+
+-->
+</body>
+</html>

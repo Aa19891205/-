@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #out{
+            width: 400px;
+            height:400px;
+            background-color:yellow;
+        }
+
+        #in{
+            width: 200px;
+            height:200px;
+            background-color:red;
+
+        }
+    </style>
+</head>
+<body>
+
+<div id="out">
+    <div id="in"></div>
+</div>
+
+</body>
+<script>
+    /*
+    * e.target和e.currentTarget的区别 target指的是事件的真正触发者，currentTarget指的是事件的监听者，当不存在冒泡或者捕获的情况下，通常两者指向的对象为同一个，但是如果存在冒泡或者捕获，就会指向各自所产生的对象
+     * */
+    let out=document.getElementById("out");
+    let inner=document.getElementById("in");
+
+    out.addEventListener("click",function(e){
+        console.log("我在外面");
+        console.log(e.target);
+        console.log(e.currentTarget);
+    },false);
+    inner.addEventListener("click",function(e){
+        console.log("冒泡了");
+        console.log(e.target);
+        console.log(e.currentTarget);
+
+    },false);
+//    e.currentTarget 永远指绑定当前处理函数的元素，e.target谁触发的就指谁。
+</script>
